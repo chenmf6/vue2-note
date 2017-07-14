@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+
+html, #note-app {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+#note-toolbar {
+  float: left;
+  width: 80px;
+  height: 100%;
+  padding: 25px;
+  color: #767676;
+  background-color: #304140;
+}
+#note-toolbar > i {
+  font-size: 30px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+#note-toolbar > i:hover {
+  opacity: 1;
+}
+#note-toolbar > i.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.8;
+}
+.starred {
+  color: #f7ae4f;
+}
+
+#note-list {
+  float: left;
+  width: 300px;
+  height: 100%;
+  background-color: #f5f5f5;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+#list-header {
+  padding: 5px 25px 15px 25px;
+}
+#list-header h2 {
+  padding-bottom: 8px;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.notes-counter {
+  display: inline-block;
+}
+#note-list .container {
+  max-height: calc(100% - 146px);
+  overflow: auto;
+  width: 100%;
+  padding: 0;
+  box-shadow: #767676;
+}
+.list-group-item {
+  display: block;
+}
+.list-group-item:hover {
+  cursor: pointer;
+}
+.list-group-item-heading {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-group-item-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  word-wrap: break-word;
+  text-indent: 25px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.list-group-item-date {
+  display: block;
+  text-align: right;
+  font-family: 'Helvetica', sans-serif;
+}
+#note-editor {
+  height: 100%;
+  margin-left: 380px;
+  padding: 5px;
+  border-radius: 0;
+}
+#note-editor .form-group {
+  height: 80%;
+}
+#note-editor .title-editor {
+  border: 0;
+  min-height: 2em;
+  font-size: 30px;
+  font-weight: 100;
+}
+#note-editor .content-editor {
+  border: 0;
+  padding-top: 15px;
+  overflow: auto;
+  height: 100%;
+}
