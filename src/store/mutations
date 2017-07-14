@@ -1,0 +1,45 @@
+import * as types from './mutation_types'
+
+export default {
+  [types.SET_NOTES] (state, {notes}) {
+    state.notes = notes
+    state.activeNote = state.notes[0] || {}
+  },
+  [types.ADD_NOTE] (state) {
+    let newNote = {
+      date: new Date(),
+      title: '',
+      content: '',
+      favorite: false
+    }
+    state.notes.unshift(newNote)
+    state.activeNote = newNote
+  },
+  [types.DELETE_NOTE] (state) {
+    removeByValue(state.notes, state.activeNote)
+  },
+  [types.EDIT_NOTE] (state, {noteTxt}) {
+    state.activeNote.title = noteTxt.title
+    state.activeNote.content = noteTxt.content
+  },
+  [types.SET_ACTIVE_NOTE] (state, {note}) {
+    if (note) {
+      state.activeNote = note
+    }
+  },
+  [types.TOGGLE_FAVORITE] (state) {
+    state.activeNote.favorite = !state.activeNote.favorite
+  },
+  [types.SET_SHOW] (state, {show}) {
+    state.show = show
+  }
+}
+
+function removeByValue (array, item) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === item) {
+      array.splice(i, 1)
+      break
+    }
+  }
+}
