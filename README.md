@@ -10,19 +10,13 @@
 - 支持星标/取消星标笔记
 - 支持本地化存储
 
-## 安装步骤
-本项目是使用vue-cli脚手架生成的项目，可以从我的github上clone下来
-
-  ``` bash
-  git clone https://github.com/chenmf6/vue-note.git
-  cd vue-note
-  npm install
-  npm run dev
-  ```
-
 ## 功能演示
+> [功能演示请戳这里](https://chenmf6.github.io/vue2-note/)
 
-<img src="./screenshot/demo.gif" width="600" alt="demo">
+![功能截图](./screenshot/demo.gif)
+
+## 参考项目
+> [Learn Vuex by Building a Notes App](https://github.com/coligo-io/notes-app-vuejs-vuex)
 
 ## 主要难点
 
@@ -39,3 +33,14 @@
 主要方法：
   1) 存储数据：localStorage.setItem(item, value)
   2) 获取数据：localStorage.getItem(item)
+
+  ## 安装步骤
+本项目是使用vue-cli脚手架生成的项目，可以从我的github上clone下来
+
+  ``` bash
+  git clone https://github.com/chenmf6/vue-note.git
+  cd vue-note
+  npm install
+  npm run dev
+  ```
+  
